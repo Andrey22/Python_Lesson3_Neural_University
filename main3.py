@@ -4,7 +4,6 @@ import re
 
 x_srt = open('The_Third_Lesson_Text.txt', 'r', encoding='UTF-8')
 x_srt = x_srt.read()
-# x_srt = re.sub(r'[^\n]',' ',x_srt)
 x_srt = re.sub(r'[^\w\s]','',x_srt)
 x_srt = re.sub('\n',' ',x_srt)
 print(x_srt)
@@ -32,16 +31,10 @@ print(dict_new)
 # #        max=list1[index]
 # # print (max)
 list5=[]
-list6=[1,2,3,4,5]
+list6=[]
+list6 = [1 for i in range(5)]
 list5=list(sorted(dict_new.values(), reverse=True))
 for i in range(5):
     list6[i]=list5[i]
 print( list6)
 print(len(set(dict_new)))
-
-# wordDict = sorted(x.items(), key=operator.itemgetter(1), reverse = True)
-# list=dict_new.values()
-# list=[0,10,23,5]
-# print(list.sort())
-# print(list.sort)
-# top_five_runners = runners[:5]
